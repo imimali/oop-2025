@@ -1,3 +1,6 @@
+# Seminar 3
+The code here is written solely to expose the basic idea behind how we're approaching undo. An interface and specifications should be written, and more testing should be done. 
+
 # Seminar 1 demos
 A non-exhaustive set of examples for the first seminar.
 ## Structs and typedefs

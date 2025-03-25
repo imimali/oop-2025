@@ -4,17 +4,21 @@
 
 #ifndef LIST_H
 #define LIST_H
-#include "domain.h"
-typedef Athlete* TElem;
+
+typedef void* TElem;
+typedef void (*DestroyFunction)(TElem);
+typedef TElem (*CopyFunction)(TElem);
 
 typedef struct {
     TElem* elements;
     int size, capacity;
+    DestroyFunction destroyElement;
+    CopyFunction copyElement;
 } List;
 
 ///
 /// @return
-List* createList();
+List* createList(DestroyFunction destroyFn, CopyFunction copyFn);
 
 void destroyList(List*list);
 

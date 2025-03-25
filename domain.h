@@ -8,14 +8,13 @@
 typedef struct Athlete {
     char *name;
     int height;
-
 } Athlete;
 
-Athlete * createAthlete(char *name, int height);
+Athlete *createAthlete(char *name, int height);
 
-void destroyAthlete(Athlete* athlete);
+void destroyAthlete(Athlete *athlete);
 
-Athlete* copyAthlete(Athlete* athlete);
+Athlete *copyAthlete(Athlete *athlete);
 
 void testAthlete();
 

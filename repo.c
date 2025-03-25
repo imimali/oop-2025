@@ -3,6 +3,7 @@
 //
 #include "repo.h"
 #include "domain.h"
+#include "list.h"
 #include <stdlib.h>
 
 Repository *createRepo() {
@@ -10,6 +11,11 @@ Repository *createRepo() {
     repo->elements = createList(destroyAthlete, copyAthlete);
     return repo;
 }
+
+void addAthleteRepo(Repository *repo, Athlete *athlete) {
+    add(repo->elements, athlete);
+}
+
 
 void destroyRepo(Repository *repo) {
     destroyList(repo->elements);

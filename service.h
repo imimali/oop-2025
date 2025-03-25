@@ -6,12 +6,21 @@
 #define SERVICE_H
 #include "list.h"
 #include "repo.h"
+
 typedef struct {
-    Repository*repo;
-    List* undoStack;
-}Service;
+    Repository *repo;
+    List *undoStack;
+} Service;
 
-Service* createService();
+Service *createService();
 
-void destroyService(Service* service);
+void addAthlete(Service*service,char *name, int height);
+
+void undo(Service*service);
+
+void destroyService(Service *service);
+
+void testAddWithUndo();
+
+
 #endif //SERVICE_H
